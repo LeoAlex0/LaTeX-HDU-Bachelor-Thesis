@@ -1,0 +1,247 @@
+% MIT License
+%
+% Copyright (c) 2019 Star Brilliant
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{HDU-Bachelor-Thesis}
+
+% 导入 \XeLaTeX \LuaLaTeX
+\usepackage{metalogo}
+% 导入 \bibliography
+\usepackage{natbib}
+% 导入 \includepdf
+\usepackage{pdfpages}
+% 导入 \sout
+\usepackage{ulem}
+% 导入 \textcolor
+\usepackage{xcolor}
+
+\title{杭州电子科技大学本科毕业设计 \LaTeX{} 模版样例文档}
+\author{张三}
+
+\begin{document}
+% 页码在 PDF 阅读器中显示为罗马数字
+\pagenumbering{roman}
+% 关闭页眉、页脚
+\pagestyle{empty}
+% 导入封面
+%\includepdf[pages={-}]{封面.pdf}
+
+\clearpage
+% 关闭页脚
+\pagestyle{HDU-bachelor-empty}
+
+\section*{摘\hspace{2em}要}
+
+这是一个适用于杭州电子科技大学本科毕业设计的\LaTeX{}模版的样例文档。
+
+\vspace{\baselineskip}\noindent
+\textsf{关键词：}杭州电子科技大学；毕业设计；\LaTeX；模版
+
+\clearpage
+
+\section*{\textbf{ABSTRACT}}
+
+This is a sample document of a \LaTeX{} template for bachelor thesis of Hangzhou Dianzi University.
+
+\vspace{\baselineskip}\noindent
+\textbf{Key words:} Hangzhou Dianzi University; bachelor thesis; \LaTeX; template
+
+\clearpage
+% 生成目录
+\tableofcontents
+
+\clearpage
+% 将页码重置为 1
+\pagenumbering{arabic}
+% 开启页脚
+\pagestyle{HDU-bachelor}
+
+\section{引言}
+
+这是一个适用于杭州电子科技大学本科毕业设计的\LaTeX\cite{lamport1994latex}模版的样例文档。
+
+\clearpage
+\section{正文}
+
+以下为测试样例文本，来自于《杭州电子科技大学毕业设计（论文）的写作规范和参考格式》。
+
+\subsection{毕业设计（论文）写作规范}
+
+论文或设计说明书内容一般应由八个主要部分组成，依次为：\textcolor{red}{题目，中、英文摘要，关键词，目录，文本主体，致谢，参考文献，附录（必要时）}。各部分的具体要求如下：
+
+\subsubsection{题目}
+
+题目应该用极为精炼的文字把论文的主题或总体内容表达出来。题目字数一般不宜超过20个汉字。有特殊要求的，如为了给题目加以补充说明，或为了强调论文所研究的某一个侧面等，则可加注副标题。
+
+\subsubsection{中、英文摘要}
+
+本科毕业设计（论文）摘要包含中文摘要与英文摘要两种。论文摘要以简要文字介绍研究课题的目的、方法、内容及主要结果。在论文摘要中，要突出本课题的创造性成果或创新见解。中文摘要一般不超过400个汉字，英文摘要的内容则要与中文摘要相一致。
+
+\subsubsection{关键词}
+
+本科毕业设计（论文）关键词包括中文与英文两种。关键词是表述论文主题内容信息的单词或术语，其数量一般为3–6个。每一个英文关键词必须与中文关键词相对应。
+
+\subsubsection{目录}
+
+目录是论文各组成部分的小标题，文字应简明扼要。一般的说，本科毕业设计（论文）目录按三级标题编写，应标明页数，以便阅读。目录中的标题应与正文中的标题一致。目前通用的标题序次结构有以下二种，文科类一般采用第一种，理工科类一般采用第二种。
+
+第一种序次：一、（一）、1……
+
+第二种序次：1.、1.1、1.1.1……
+
+\subsubsection{文本主体}
+
+本科毕业设计（论文）正文要符合一般学术论文的写作规范，要求文字流畅、语言准确、层次清晰、论点清楚、论据准确、论证完整严密，有独立的观点和见解，应具备学术性，科学性和一定的创造性。
+
+文本主体一般包括引言（或称前言、序言等）、正文和结论三部分。
+
+引言宣示课题的“来龙”，说明本课题的意义、目的、主要研究内容、范围及应解决的问题。也有的本科毕业设计（论文）正文不用引言，而是直接从第一章写起，则第一章就相当于引言。
+
+正文是毕业设计（论文）的核心。在正文里，作者要对课题的内容和成果做详细的表述、深入的分析和周密的论证。毕业论文的正文一般包括前人对课题研究的进展综述、理论分析、本课题进行的研究工作的内容、研究成果、总结和讨论等内容；毕业设计说明书的正文一般包括方案论证与比较、理论分析及计算、结构设计及软件设计、系统测试、方案校验等。对于不同学科的毕业设计（论文），其正文论述的方式和内容也有所不同，这里不作具体说明，详见《普通高等学校本科毕业设计（论文）指导》\cite{putong-wenkejuan,putong-ligongkejuan}。
+
+结论是全文的思想精髓和文章价值的体现。应概括说明所进行工作的情况和研究成果，分析其优点和特色，指出创新所在，并应指出其中存在的问题和今后的改进方向，特别是对工作中遇到的重要问题要着重指出，并提出自己的见解。它集中反映作者的研究成果和总体观点，阐明课题的“去脉”。结论要简单、明确，措词严密，篇幅不宜过长。结论部分可以用“结语”、“结束语”等标题来表明，也可以不用标题表明。
+
+文本主体一般由标题、文字、图、表格和公式等部分组成，其书写的规范和标准如下：
+
+\begin{enumerate}
+
+    \item 标题\\
+    正文中的标题也称小标题，其目的在于使文章的层次清晰。有的小标题用文字概括出本层次的中心内容，有的小标题直接使用数字，仅仅表明顺序，起到承上启下的作用。
+
+    \item 注释\\
+    正文中引述他人的观点、统计数据或计算公式等必须注明出处，有需要解释的内容也可以加注说明，这就是注释。注释用页末注,即在引用的地方写一个脚注标号，把注文放在加注处那一页稿纸的下端。也可以使用篇末注，即把全部的注文集中在论文末。注释的序号要用①、②、③等数码表示，而不能用[1]、[2]、[3]等数码表示，以免与参考文献的序码相混淆。
+
+    \item 标点符号\\
+    毕业论文中的标点符合应符合国家标准GB/T15834-1995《标点符号用法》\cite{gbt15834-1995}的规定。一些需要注意的地方列举如下：
+    \begin{enumerate}
+        \item 连接号中的半字线即“-”，占半个字宽，书写时不占格，写在两格之间，用于结合各种并列和从属关系。例如并列词组（温度-时间曲线），合金系统（Fe-Cr-Al），产品型号（SZB-4真空泵），化合物（甲烷-d），币制（卢布-戈比），图、表、公式的序号（图3-1，表2-5）。
+        \item 连接号中的一字线“—”占一个字宽，书写时应比汉字“一”略宽，书写时占一格位置。它用在化学键（如C—H—C）、标准代号（如137—64）、图注（如1—低碳钢）、机械图中的剖面（如A—A）等标注符号中。
+        \item 省略号在正文中占两格“……”，在公式中占一格“…”。
+        \item 括号一般用圆括号。有双重括号时，可以圆括号外面再加方括号。数学式中的括号分三层，即\{[()]\}，层次不得改变。
+        \item 在并列的词组和短句之中又包含并列词的较复杂情况下，为避免并列的范围混淆不清起见，外层的并列词组或短句可用逗号或分号分开，其中的并列词用顿号分开。例如：“须解决邻位效应，饱和链中的中性质交递，有机物中氢分子、卤分子的活动性，瓦耳登转化等问题。”
+    \end{enumerate}
+
+    \item 名词、名称
+    \begin{enumerate}
+        \item 毕业论文中的科学技术名词术语尽量采用全国自然科学名词审定委员会审定公布的科技名词或国家标准等标准中编写的名词，尚未编定和叫法有争议的，可采用惯用的名称。
+        \item 使用外文缩写代替某一名词术语时，首次出现应在括号内注明其含义，如CPU（Central Processing Unit，计算机中央处理器）。
+        \item 除一般很熟知的外国人名（如牛顿、爱因斯坦、门捷列夫、达尔文、马克思等）只须按通常标准译法写译名外，其余采用英文原名，不译成中文。其他语种的人名可译可不译。英文人名按名在前姓在后的原则书写，如P. Cray。
+        \item 国内工厂、机关、单位的名称应使用全称，不得简化。
+    \end{enumerate}
+
+    \item 量和单位
+    \begin{enumerate}
+        \item 毕业论文中量的单位必须符合我国法定计量单位。它以国际单位制（SI）为基础。请参看有关文件。如GB3100-3102-93等。
+        \item 有些单位的名称既可用全称，也可用简称表示（如“伏特”和“伏”等等），但在全文中用法要一致，不要两者并用。
+        \item 非物理量的单位，如件、台、人、周、月、元等，可用汉字与单位符号构成组合形式的单位，如：件/台·h，元/km。
+        \item 在文中不要用物理量符号、计量单位符号和数学符号代替相应的名称。在表示一个物理量的量值时，应在阿拉伯数字之后用计量单位符号。例如：“试样高度h为25mm”不要写出“试样h为25mm”。
+    \end{enumerate}
+
+    \item 数字
+    \begin{enumerate}
+        \item 毕业论文中的测量、统计的数据一律用阿拉伯数字。
+        \item 公历的年、月、日一律用阿拉伯数字，如“1949年10月1日”；夏历的年、月、日一律用汉字。历史上的朝代和年号须加注公元纪年。
+        \item 普通叙述中不很大的数目，一般不宜用阿拉伯数字。例如：“他发现两颗小行星”，不宜写成“他发现2颗小行星”。
+        \item 大约的数目可用中文数字，也可用阿拉伯数字。例如：“约一百五十人”，也可写成“约150人”。
+        \item 分数可用阿拉伯数字表示，亦可用中文数字表示，但两者写法不同，前者要写成“5/8”或“八分之五”。
+    \end{enumerate}
+
+    \item 公式
+    \begin{enumerate}
+        \item 公式应另起一行书写。
+        \item 公式的编号用圆括号括起放在公式右边行末，在公式和编号之间不加虚线。公式可按全文统编序号，也可按章单独立序号，如：(49)、(7.11)，采用哪一种序号应和稿中的图序、表序编法一致。子公式可不编序号，需要引用时可加编a、b、c、…等，重复引用的公式不得另编新序号。公式序号必须连续，不得重复或跳缺。
+        \item 文中引用某一公式时，写成“由式(16.20)可见”。
+    \end{enumerate}
+
+    \item 表格\\
+    表是以行和列组合的形式来表达数据和统计结果的一种方式。表格的种类也很多，如示意表、统计表、说明对照表等。表中的参数应标明量和单位的符号，每个表格应有自己的表题和表序，表题应写在表格上方正中，表序写在表题左方不加标点，空一格接写表题，表题末尾不加标点。全文的表格统一编序，也可以逐章编序，不管采用哪种方式，表序必须连续。表格允许下页接写，接写时表题省略，表头应重复书写，并在右上方写“续表××”。此外，表格应写在离正文首次出现处的近处，不应过分超前或拖后。
+
+    \item 插图\\
+    图能直观地表示出各种事物因素之间的关系，科学研究的结果，以及事物的发展变化与趋势，起到文字难于起到的作用。图的种类很多，如条形图、线形图、流程图、示意图等。图具有自明性的特征，因此内容上不能与文字表达的东西重复。图中的术语、符号、单位等应同文字表述所使用的一致。每幅插图应有图序和图题，全文插图可以统一编序，也可以逐章单独编序，不管采用哪种方式，图序必须连续，不得重复或跳缺。由若干分图组成的插图，分图用a，b，c…标序，分图的图名以及图中各种代号的意义，以图注形式写在图题下方，先写分图名，另起行后写代号的意义。电气图、机械图等还应符合相应的国家标准。
+
+\end{enumerate}
+
+\subsubsection{致谢}
+
+简述自己通过做毕业设计（论文）所获得的体会，并对指导教师以及相关人员致谢。致谢的文字虽不多，却是论文不可缺少的内容。
+
+\subsubsection{参考文献}
+
+参考文献是毕业设计（论文）不可缺少的组成部分，也是作者对他人知识成果的承认和尊重。参考文献的引用和著录应符合规范，引用的资料具有权威性，并对毕业设计（论文）有直接的参考价值。所列出的参考文献不得少于10篇，其中外文文献不得少于2篇，发表在期刊上的学术论文不得少于4篇。参考文献应按文中引用出现的顺序来编序，附于文未。
+
+参考文献书写格式应符合GB7714-1987《文后参考文献著录规则》\cite{gb7714-1987}。
+
+\subsubsection{附录}
+
+附录包括不宜放在正文中但又直接反映工作成果的资料，如调查问卷、公式推演、编写程序、实验数据等内容。附录的篇幅不宜过大，若附录部分内容较多，可单独装订成册。
+
+\subsection{毕业设计（论文）的参考格式}
+
+\begin{enumerate}
+    \item 论文采用A4纸打印。页边距：上3厘米，下2厘米，左3厘米，右2厘米；装订线1厘米；页眉距边界2厘米，页脚距边界1厘米。全文除封面、封底无页眉外，均采用页眉“杭州电子科技大学本科毕业论文”或“杭州电子科技大学本科毕业设计”，宋体五号字，居中。
+
+    \item 封面、封底、中文摘要、ABSTRACT、目录无需页码，论文其余部分均采用阿拉伯数字页码，Times New Roman五号字，居中。
+
+    \item “摘要”、“目录”、 “致谢”、“参考文献”，“附录”等为黑体三号字，“ABSTRACT”为Times New Roman加黑三号字，均居中，单倍行距，段前2行，段后2行。
+
+    \item 封面由学校统一制作，分为毕业设计和毕业论文两类，填写的内容均为楷体小三号字。
+
+    \item 中文摘要内容为宋体小四号字，摘要内容后下空一行打印“关键词”为黑体小四号字，其后关键词为宋体小四号字；英文摘要内容为Times New Roman小四号字，英文摘要内容后下空一行打印“Keywords”为Times New Roman加黑小四号字，其后关键词为小写Times New Roman小四号字。行距均为20磅，每一关键词之间用分号分开，最后一个关键词后不打标点符号。
+
+    \item 目录内容中文为宋体小四号字，英文为Times New Roman小四号字，依次排列各章节、致谢、参考文献、附录等。目录内容至少列出第一和第二级标题，每一级标题后应标明起始页码。目录可使用Word系统自带的“插入目录功能”自动生成
+
+    \item 正文第一级标题为黑体三号字，居中，单倍行距，段前2行，段后2行。第二级标题为黑体四号字，第三级标题为黑体小四号字，若采用第一种序次（一、（一）、1……）为靠左空两格，采用第二种序次（1.、1.1、1.1.1……）为靠左顶格。
+
+    \item 正文内容中文为宋体小四号字，英文为Times New Roman小四号字，行距20磅，标准字符间距。每一章内容均另起一页。
+
+    \item  图应有图名、图号，均为宋体五号字，居中，列在图的下方。
+
+    \item 表格应有表名、表号，均为宋体五号字，居中，列在表的上方。
+
+    \item 公式书写应另起一行，公式内容居中，公式后应注明序号，均为宋体五号字。
+
+    \item 参考文献的内容中文为宋体小四号字，英文为Times New Roman小四号字居左顶格打印，行距均为20磅。
+\end{enumerate}
+
+\clearpage
+\section{结论}
+
+\clearpage
+\unnumberedsection{致谢}
+
+感谢TV。感谢所有TV，MTV。感谢广播。
+
+今天，这里蓬荜生辉，人山人海，海枯石烂。我做梦都没想到我能成为这个作者。其实，我不是火命，\sout{我是水货}，我是水命。
+
+我呢，在这里，我感谢我的老伴。没有我的老伴就没有我的今天，因为我是陪她练的，把她练下去了，把我练上来了。俗话说，一个成功的男人，\sout{后背背一个多事的女人}，背后必须有一个管事的女的，来管我。
+
+我在这里，今天，感谢政府，\sout{能给我重新做人的机会}，给我当作者的机会。我一定要\sout{坦白}，坦率做人，坦诚做事。
+
+\clearpage
+% 修正目录超链接问题
+\phantomsection
+% 从 example.bib 中读入参考文献
+\bibliography{example}
+
+\clearpage
+\unnumberedsection{附录}
+
+\end{document}
