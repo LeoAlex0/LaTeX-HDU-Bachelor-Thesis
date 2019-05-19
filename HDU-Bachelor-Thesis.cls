@@ -29,6 +29,8 @@
 
 % 尺寸运算功能
 \RequirePackage{calc}
+% 设置题注格式
+\RequirePackage{caption}
 % 设置带圈角标
 \RequirePackage[stable,perpage,symbol*]{footmisc}
 % 启用 GB/T 7714-2015 参考文献格式
@@ -81,6 +83,9 @@
 \renewcommand{\LARGE}{\fontsize{22bp}{28.1875bp}\selectfont}
 \renewcommand{\huge}{\fontsize{24bp}{30.75bp}\selectfont}
 \renewcommand{\Huge}{\fontsize{26bp}{33.3125bp}\selectfont}
+
+% 设置题注格式
+\captionsetup{font=small}
 
 % 设置页眉页脚
 % 可以 \renewcommand{\HDU@header}{文字} 来改变页眉内容
