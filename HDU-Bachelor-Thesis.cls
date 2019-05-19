@@ -125,6 +125,24 @@
 \settocbibname{参考文献}
 \setlength{\bibsep}{0pt}
 
+% 设置 \autoref 格式
+\def\figureautorefname{图}%
+\def\tableautorefname{表}%
+\def\partautorefname{篇}%
+\def\appendixautorefname{附录}%
+\def\equationautorefname{公式}%
+\def\Itemautorefname{项目}%
+\def\chapterautorefname{章}%
+\def\sectionautorefname{节}%
+\def\subsectionautorefname{小节}%
+\def\subsubsectionautorefname{子小节}%
+\def\paragraphautorefname{段落}%
+\def\subparagraphautorefname{子段落}%
+\def\Hfootnoteautorefname{脚注}%
+\def\AMSautorefname{公式}%
+\def\theoremautorefname{定理}%
+\def\pageautorefname{页面}%
+
 % 设置带圈角标
 % 感谢南京大学计算机科学与技术系胡海星编写的《NJU-Thesis:南京大学学位论文 XeLaTeX 模板》
 \DefineFNsymbols*{circlednumber}[text]{{①}{②}{③}{④}{⑤}{⑥}{⑦}{⑧}{⑨}{⑩}{⑪}{⑫}{⑬}{⑭}{⑮}{⑯}{⑰}{⑱}{⑲}{⑳}{㉑}{㉒}{㉓}{㉔}{㉕}{㉖}{㉗}{㉘}{㉙}{㉚}{㉛}{㉜}{㉝}{㉞}{㉟}{㊱}{㊲}{㊳}{㊴}{㊵}{㊶}{㊷}{㊸}{㊹}{㊺}{㊻}{㊼}{㊽}{㊾}{㊿}}
