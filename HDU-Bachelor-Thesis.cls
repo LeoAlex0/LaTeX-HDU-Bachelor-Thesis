@@ -62,6 +62,8 @@
 \setsansfont[BoldFont=texgyreheros-bold.otf,BoldItalicFont=texgyreheros-bolditalic.otf,ItalicFont=texgyreheros-italic.otf]{texgyreheros-regular.otf}
 % Tex Gyre Cursor 暂时没打开，因为 LaTeX 默认那个似乎更好看一点
 %\setmonofont[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf]{texgyrecursor-regular.otf}
+% 或者用 LaTeX 默认等宽字体的 Unicode 版
+%\setmonofont[BoldFont=cmuntb.otf,BoldItalicFont=cmuntx.otf,ItalicFont=cmunit.otf,SlantedFont=cmunst.otf]{cmuntt.otf}
 
 % 设置中文字体为中易系列字体，如果在非 Microsoft Windows 环境下使用，可能需要安装这些字体
 \setCJKfamilyfont{zhsong}{SimSun}
