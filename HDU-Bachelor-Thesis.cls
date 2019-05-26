@@ -1,3 +1,6 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+
 % MIT License
 %
 % Copyright (c) 2019 Star Brilliant
