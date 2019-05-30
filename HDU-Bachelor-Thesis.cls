@@ -27,8 +27,11 @@
 
 \ProvidesClass{HDU-Bachelor-Thesis}[2019/05/17 Bachelor thesis template for Hangzhou Dianzi University]
 
+% 防止 fontspec 与 mathspec 冲突
+\PassOptionsToPackage{no-math}{fontspec}
+
 % 调用基类 CTeX Article
-\LoadClass[zihao=-4]{ctexart}
+\LoadClass[fontset=none,zihao=-4]{ctexart}
 
 % 尺寸运算功能
 \RequirePackage{calc}
@@ -60,10 +63,7 @@
 % 设置英文字体为 TeX Gyre 系列字体为 TeX Gyre Termes / Heros / Cursor，它们兼容 Times / Helvetica / Courier
 \setmainfont[BoldFont=texgyretermes-bold.otf,BoldItalicFont=texgyretermes-bolditalic.otf,ItalicFont=texgyretermes-italic.otf]{texgyretermes-regular.otf}
 \setsansfont[BoldFont=texgyreheros-bold.otf,BoldItalicFont=texgyreheros-bolditalic.otf,ItalicFont=texgyreheros-italic.otf]{texgyreheros-regular.otf}
-% Tex Gyre Cursor 暂时没打开，因为 LaTeX 默认那个似乎更好看一点
-%\setmonofont[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf]{texgyrecursor-regular.otf}
-% 或者用 LaTeX 默认等宽字体的 Unicode 版
-%\setmonofont[BoldFont=cmuntb.otf,BoldItalicFont=cmuntx.otf,ItalicFont=cmunit.otf,SlantedFont=cmunst.otf]{cmuntt.otf}
+\setmonofont[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf]{texgyrecursor-regular.otf}
 
 % 设置中文字体为中易系列字体，如果在非 Microsoft Windows 环境下使用，可能需要安装这些字体
 \setCJKfamilyfont{zhsong}{SimSun}
@@ -72,7 +72,7 @@
 \setCJKfamilyfont{zhkai}{KaiTi}
 \setCJKmainfont[ItalicFont={FangSong}]{SimSun}
 \setCJKsansfont[ItalicFont={KaiTi}]{SimHei}
-\setCJKmonofont{FangSong}
+\setCJKmonofont[ItalicFont={FangSong}]{FangSong}
 
 % 关掉 CTeX 的 1.3 倍行距
 \linespread{1}
