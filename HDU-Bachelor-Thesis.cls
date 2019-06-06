@@ -37,6 +37,8 @@
 \RequirePackage{calc}
 % 设置题注格式
 \RequirePackage{caption}
+% 设置字体
+\RequirePackage[no-math]{fontspec}
 % 设置带圈角标
 \RequirePackage[stable,perpage,symbol*]{footmisc}
 % 启用 GB/T 7714-2015 参考文献格式
