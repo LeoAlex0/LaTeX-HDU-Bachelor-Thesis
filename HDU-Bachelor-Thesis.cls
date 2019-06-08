@@ -99,14 +99,14 @@
 \newcommand{\HDU@header}{杭州电子科技大学本科毕业设计}
 % 使用 \pagestyle{HDU-Bachelor} 来调用这个格式
 \newpagestyle{HDU-bachelor}[\fontsize{10.5bp}{13.453125bp}\selectfont]{%
-    \sethead{}{\HDU@header}{}
-    \renewcommand{\makeheadrule}{\rule[-5bp]{\linewidth}{.75bp}}
+    \sethead{}{\HDU@header}{}%
+    \renewcommand{\makeheadrule}{\rule[-5bp]{\linewidth}{.75bp}}%
     \setfoot{}{\thepage}{}%
 }
 % 使用 \pagestyle{HDU-bachelor-empty} 来关闭页码
 \newpagestyle{HDU-bachelor-empty}[\fontsize{10.5bp}{13.453125bp}\selectfont]{%
-    \sethead{}{\HDU@header}{}
-    \renewcommand{\makeheadrule}{\rule[-5bp]{\linewidth}{.75bp}}
+    \sethead{}{\HDU@header}{}%
+    \renewcommand{\makeheadrule}{\rule[-5bp]{\linewidth}{.75bp}}%
     \setfoot{}{}{}%
 }
 
