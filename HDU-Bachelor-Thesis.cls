@@ -116,7 +116,7 @@
 \newcommand{\unnumberedsection}[1]{\section*{#1}\phantomsection\addcontentsline{toc}{section}{#1}}
 
 % 设置一、二、三级小标题格式
-\titleformat{\section}{\vspace{-8bp}\vspace*{8bp}\filcenter\rmfamily\CJKfamily{zhhei}\fontsize{16bp}{20bp}\selectfont}{\thesection}{1em}{}
+\titleformat{\section}{\vspace{-8bp}\vspace*{8bp}\filcenter\rmfamily\CJKfamily{zhhei}\fontsize{16bp}{20.5bp}\selectfont}{\thesection}{1em}{}
 \titlespacing{\section}{0bp}{25bp}{25bp}
 \titleformat{\subsection}{\sffamily\fontsize{14bp}{20bp}\selectfont}{\thesubsection}{1em}{}
 \titlespacing{\subsection}{0bp}{0bp}{0bp}
