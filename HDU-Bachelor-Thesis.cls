@@ -97,7 +97,7 @@
 \captionsetup{font=small}
 
 % 设置页眉页脚
-% 可以 \renewcommand{\HDU@header}{文字} 来改变页眉内容
+% 可以 \makeatletter\renewcommand{\HDU@header}{文字}\makeatother 来改变页眉内容
 \newcommand{\HDU@header}{杭州电子科技大学本科毕业设计}
 % 使用 \pagestyle{HDU-Bachelor} 来调用这个格式
 \newpagestyle{HDU-bachelor}[\fontsize{10.5bp}{13.453125bp}\selectfont]{%
