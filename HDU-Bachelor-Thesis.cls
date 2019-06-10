@@ -78,6 +78,8 @@
 
 % 关掉 CTeX 的 1.3 倍行距
 \linespread{1}
+% 关掉 0pt-1pt 的弹性段间距
+\setlength{\parskip}{0pt}
 
 % 设置各种字号
 \renewcommand{\tiny}{\fontsize{6.5bp}{8.328125bp}\selectfont}
