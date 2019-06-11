@@ -63,7 +63,7 @@
 \geometry{a4paper,top=3cm,bottom=2cm,left=4cm,right=2cm,headheight=10.5bp,headsep=1cm-10.5bp,footskip=1cm-2.953125bp}
 
 % 设置英文字体为 TeX Gyre 系列字体为 TeX Gyre Termes / Heros / Cursor，它们兼容 Times / Helvetica / Courier
-\setmainfont[BoldFont=texgyretermes-bold.otf,BoldItalicFont=texgyretermes-bolditalic.otf,ItalicFont=texgyretermes-italic.otf]{texgyretermes-regular.otf}
+\setromanfont[BoldFont=texgyretermes-bold.otf,BoldItalicFont=texgyretermes-bolditalic.otf,ItalicFont=texgyretermes-italic.otf]{texgyretermes-regular.otf}
 \setsansfont[BoldFont=texgyreheros-bold.otf,BoldItalicFont=texgyreheros-bolditalic.otf,ItalicFont=texgyreheros-italic.otf]{texgyreheros-regular.otf}
 \setmonofont[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf,Ligatures=NoCommon]{texgyrecursor-regular.otf}
 
@@ -72,7 +72,7 @@
 \setCJKfamilyfont{zhhei}{SimHei}
 \setCJKfamilyfont{zhfang}{FangSong}
 \setCJKfamilyfont{zhkai}{KaiTi}
-\setCJKmainfont[ItalicFont={FangSong}]{SimSun}
+\setCJKromanfont[ItalicFont={FangSong}]{SimSun}
 \setCJKsansfont[ItalicFont={KaiTi}]{SimHei}
 \setCJKmonofont[ItalicFont={FangSong}]{FangSong}
 
