@@ -1,6 +1,6 @@
+% !TEX encoding = UTF-8 Unicode
 % !TEX TS-program = xelatex
 % !BIB program = biber
-% !TEX encoding = UTF-8 Unicode
 
 % MIT License
 %
