@@ -113,7 +113,7 @@
 }
 
 % 定义 \unnumberedsection 命令，用以方便地加入一个无标号的小标题
-\newcommand{\unnumberedsection}[1]{\section*{#1}\phantomsection\addcontentsline{toc}{section}{#1}}
+\newcommand{\unnumberedsection}[2]{\phantomsection\addcontentsline{toc}{section}{#1}\section*{#2}}
 
 % 设置一、二、三级小标题格式
 \titleformat{\section}{\filcenter\rmfamily\CJKfamily{zhhei}\fontsize{16bp}{20.5bp}\selectfont\vspace{\topskip}\vspace*{-\topskip}\vspace*{25bp}}{\thesection}{1em}{}
