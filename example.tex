@@ -1,4 +1,5 @@
 % !TEX TS-program = xelatex
+% !BIB program = biber
 % !TEX encoding = UTF-8 Unicode
 
 % MIT License
@@ -25,10 +26,10 @@
 
 \documentclass{HDU-Bachelor-Thesis}
 
+% 导入 \addbibresource \printbibliography
+\usepackage{biblatex}
 % 导入 \XeLaTeX \LuaLaTeX
 \usepackage{metalogo}
-% 导入 \bibliography
-\usepackage{natbib}
 % 导入 \includepdf
 \usepackage{pdfpages}
 % 导入 \sout
@@ -38,6 +39,9 @@
 
 \title{杭州电子科技大学本科毕业设计 \LaTeX{} 模版样例文档}
 \author{张三}
+
+% 从 ref.bib 中读入参考文献
+\addbibresource{ref.bib}
 
 \begin{document}
 % 页码在 PDF 阅读器中显示为罗马数字
@@ -241,8 +245,8 @@ This is a sample document of a \LaTeX{} template for bachelor thesis of Hangzhou
 \clearpage
 % 修正目录超链接问题
 \phantomsection
-% 从 ref.bib 中读入参考文献
-\bibliography{ref}
+% 列出参考文献
+\printbibliography[heading=bibintoc]
 
 \clearpage
 \unnumberedsection{附录}

@@ -1,4 +1,5 @@
 % !TEX TS-program = xelatex
+% !BIB program = biber
 % !TEX encoding = UTF-8 Unicode
 
 % MIT License
@@ -29,6 +30,9 @@
 
 % 防止 fontspec 与 mathspec 冲突
 \PassOptionsToPackage{no-math}{fontspec}
+% 启用 GB/T 7714-2015 参考文献格式
+% 需要安装 biblatex-gb7714-2015
+\PassOptionsToPackage{backend=biber,style=gb7714-2015}{biblatex}
 
 % 调用基类 CTeX Article
 \LoadClass[fontset=none,zihao=-4]{ctexart}
@@ -41,8 +45,6 @@
 \RequirePackage[no-math]{fontspec}
 % 设置带圈角标
 \RequirePackage[stable,perpage,symbol*]{footmisc}
-% 启用 GB/T 7714-2015 参考文献格式
-\RequirePackage{gbt7714}
 % 页边距设置
 \RequirePackage{geometry}
 % 启用 PDF 超链接
@@ -51,8 +53,6 @@
 \RequirePackage[pagestyles]{titlesec}
 % 目录排版
 \RequirePackage{titletoc}
-% 将参考文献加入到目录中
-\RequirePackage[nottoc]{tocbibind}
 % xeCJK 中文支持包
 \RequirePackage{xeCJK}
 
@@ -131,8 +131,8 @@
 \titlecontents{subsubsection}[4em]{}{\thecontentslabel\hspace{1em}}{}{\titlerule*[0.25em]{.}\thecontentspage}
 
 % 设置参考文献格式
-\settocbibname{参考文献}
-\setlength{\bibsep}{0pt}
+\newlength{\bibitemsep}
+\AtBeginDocument{\setlength{\bibitemsep}{0pt}}
 
 % 设置 \autoref 格式
 \def\figureautorefname{图}%
