@@ -102,13 +102,13 @@
 % 使用 \pagestyle{HDU-Bachelor} 来调用这个格式
 \newpagestyle{HDU-bachelor}[\fontsize{10.5bp}{13.453125bp}\selectfont]{%
     \sethead{}{\HDU@header}{}%
-    \renewcommand{\makeheadrule}{\rule[-5bp]{\linewidth}{.75bp}}%
+    \renewcommand{\makeheadrule}{\rule[-4.75bp]{\linewidth}{.75bp}}%
     \setfoot{}{\thepage}{}%
 }
 % 使用 \pagestyle{HDU-bachelor-empty} 来关闭页码
 \newpagestyle{HDU-bachelor-empty}[\fontsize{10.5bp}{13.453125bp}\selectfont]{%
     \sethead{}{\HDU@header}{}%
-    \renewcommand{\makeheadrule}{\rule[-5bp]{\linewidth}{.75bp}}%
+    \renewcommand{\makeheadrule}{\rule[-4.75bp]{\linewidth}{.75bp}}%
     \setfoot{}{}{}%
 }
 
@@ -116,8 +116,8 @@
 \newcommand{\unnumberedsection}[1]{\section*{#1}\phantomsection\addcontentsline{toc}{section}{#1}}
 
 % 设置一、二、三级小标题格式
-\titleformat{\section}{\vspace{-8bp}\vspace*{8bp}\filcenter\rmfamily\CJKfamily{zhhei}\fontsize{16bp}{20.5bp}\selectfont}{\thesection}{1em}{}
-\titlespacing{\section}{0bp}{25bp}{25bp}
+\titleformat{\section}{\filcenter\rmfamily\CJKfamily{zhhei}\fontsize{16bp}{20.5bp}\selectfont\vspace{\topskip}\vspace*{-\topskip}\vspace*{25bp}}{\thesection}{1em}{}
+\titlespacing{\section}{0bp}{0bp}{25bp}
 \titleformat{\subsection}{\sffamily\fontsize{14bp}{20bp}\selectfont}{\thesubsection}{1em}{}
 \titlespacing{\subsection}{0bp}{0bp}{0bp}
 \titleformat{\subsubsection}{\sffamily\fontsize{12bp}{20bp}\selectfont}{\thesubsubsection}{1em}{}
