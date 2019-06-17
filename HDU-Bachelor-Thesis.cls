@@ -41,6 +41,8 @@
 \RequirePackage{calc}
 % 设置题注格式
 \RequirePackage{caption}
+% 使用 T1 字体编码
+\RequirePackage[T1]{fontenc}
 % 设置字体
 \RequirePackage[no-math]{fontspec}
 % 设置带圈角标
