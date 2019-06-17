@@ -65,18 +65,18 @@
 \geometry{a4paper,top=3cm,bottom=2cm,left=4cm,right=2cm,headheight=10.5bp,headsep=1cm-10.5bp,footskip=1cm-2.953125bp}
 
 % 设置英文字体为 TeX Gyre 系列字体为 TeX Gyre Termes / Heros / Cursor，它们兼容 Times / Helvetica / Courier
-\setromanfont[BoldFont=texgyretermes-bold.otf,BoldItalicFont=texgyretermes-bolditalic.otf,ItalicFont=texgyretermes-italic.otf]{texgyretermes-regular.otf}
-\setsansfont[BoldFont=texgyreheros-bold.otf,BoldItalicFont=texgyreheros-bolditalic.otf,ItalicFont=texgyreheros-italic.otf]{texgyreheros-regular.otf}
-\setmonofont[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf,Ligatures=NoCommon]{texgyrecursor-regular.otf}
+\setromanfont{texgyretermes-regular.otf}[BoldFont=texgyretermes-bold.otf,BoldItalicFont=texgyretermes-bolditalic.otf,ItalicFont=texgyretermes-italic.otf]
+\setsansfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,BoldItalicFont=texgyreheros-bolditalic.otf,ItalicFont=texgyreheros-italic.otf]
+\setmonofont{texgyrecursor-regular.otf}[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf,Ligatures=NoCommon]
 
 % 设置中文字体为中易系列字体，如果在非 Microsoft Windows 环境下使用，可能需要安装这些字体
 \setCJKfamilyfont{zhsong}{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
 \setCJKfamilyfont{zhhei}{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
 \setCJKfamilyfont{zhfang}{FangSong}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
 \setCJKfamilyfont{zhkai}{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
-\setCJKromanfont[ItalicFont={FangSong}]{SimSun}[AutoFakeBold=1.5]
-\setCJKsansfont[ItalicFont={KaiTi}]{SimHei}[AutoFakeBold=1.5]
-\setCJKmonofont[ItalicFont={FangSong}]{FangSong}[AutoFakeBold=1.5]
+\setCJKromanfont{SimSun}[AutoFakeBold=1.5,ItalicFont={FangSong}]
+\setCJKsansfont{SimHei}[AutoFakeBold=1.5,ItalicFont={KaiTi}]
+\setCJKmonofont{FangSong}[AutoFakeBold=1.5,ItalicFont={FangSong}]
 
 % 关掉 CTeX 的 1.3 倍行距
 \linespread{1}
