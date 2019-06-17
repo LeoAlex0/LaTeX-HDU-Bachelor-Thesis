@@ -70,13 +70,13 @@
 \setmonofont[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf,Ligatures=NoCommon]{texgyrecursor-regular.otf}
 
 % 设置中文字体为中易系列字体，如果在非 Microsoft Windows 环境下使用，可能需要安装这些字体
-\setCJKfamilyfont{zhsong}{SimSun}
-\setCJKfamilyfont{zhhei}{SimHei}
-\setCJKfamilyfont{zhfang}{FangSong}
-\setCJKfamilyfont{zhkai}{KaiTi}
-\setCJKromanfont[ItalicFont={FangSong}]{SimSun}
-\setCJKsansfont[ItalicFont={KaiTi}]{SimHei}
-\setCJKmonofont[ItalicFont={FangSong}]{FangSong}
+\setCJKfamilyfont{zhsong}{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKfamilyfont{zhhei}{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKfamilyfont{zhfang}{FangSong}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKfamilyfont{zhkai}{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKromanfont[ItalicFont={FangSong}]{SimSun}[AutoFakeBold=1.5]
+\setCJKsansfont[ItalicFont={KaiTi}]{SimHei}[AutoFakeBold=1.5]
+\setCJKmonofont[ItalicFont={FangSong}]{FangSong}[AutoFakeBold=1.5]
 
 % 关掉 CTeX 的 1.3 倍行距
 \linespread{1}
