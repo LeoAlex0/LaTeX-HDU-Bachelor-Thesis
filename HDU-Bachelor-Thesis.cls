@@ -99,17 +99,18 @@
 \captionsetup{font=small}
 
 % 设置页眉页脚
-% 可以 \makeatletter\renewcommand{\HDU@header}{文字}\makeatother 来改变页眉内容
+% 可以 \HDUheader{文字} 来改变页眉内容
 \newcommand{\HDU@header}{杭州电子科技大学本科毕业设计}
+\newcommand{\HDUheader}[1]{\renewcommand{\HDU@header}{#1}}
 % 使用 \pagestyle{HDU-Bachelor} 来调用这个格式
 \newpagestyle{HDU-bachelor}[\fontsize{10.5bp}{13.453125bp}\selectfont]{%
-    \sethead{}{\HDU@header}{}%
+    \sethead{}{\HDU@header{}}{}%
     \renewcommand{\makeheadrule}{\rule[-4.75bp]{\linewidth}{.75bp}}%
     \setfoot{}{\thepage}{}%
 }
 % 使用 \pagestyle{HDU-bachelor-empty} 来关闭页码
 \newpagestyle{HDU-bachelor-empty}[\fontsize{10.5bp}{13.453125bp}\selectfont]{%
-    \sethead{}{\HDU@header}{}%
+    \sethead{}{\HDU@header{}}{}%
     \renewcommand{\makeheadrule}{\rule[-4.75bp]{\linewidth}{.75bp}}%
     \setfoot{}{}{}%
 }
@@ -167,6 +168,99 @@
     Title={\@title},
     CreationDate={D:20000101000000} % 随手抹除文件创建时间
 }}}
+
+% 生成封面，可以配置的参数包括：
+% \title{题目}
+% \author{学生姓名}
+% \HDUyear{届次（年）}
+% \HDUschool{学院}
+% \HDUmajor{专业}
+% \HDUclassid{班级号码}
+% \HDUstudentid{学号}
+% \HDUadviser{指导教师}
+% \HDUfinishdate{完成日期（年月）}
+% \HDUsigndate{诚信承诺签署日期（年月日）}
+\newcommand{\HDU@year}{\the\year{}}
+\newcommand{\HDU@school}{}
+\newcommand{\HDU@major}{}
+\newcommand{\HDU@classid}{}
+\newcommand{\HDU@studentid}{}
+\newcommand{\HDU@adviser}{}
+\newcommand{\HDU@finishdate}{\the\year{} 年 \the\month{} 月}
+\newcommand{\HDU@signdate}{\the\year{} 年 \the\month{} 月 \the\day{} 日}
+\newcommand{\HDUyear}[1]{\renewcommand{\HDU@year}{#1}}
+\newcommand{\HDUschool}[1]{\renewcommand{\HDU@school}{#1}}
+\newcommand{\HDUmajor}[1]{\renewcommand{\HDU@major}{#1}}
+\newcommand{\HDUclassid}[1]{\renewcommand{\HDU@classid}{#1}}
+\newcommand{\HDUstudentid}[1]{\renewcommand{\HDU@studentid}{#1}}
+\newcommand{\HDUadviser}[1]{\renewcommand{\HDU@adviser}{#1}}
+\newcommand{\HDUfinishdate}[1]{\renewcommand{\HDU@finishdate}{#1}}
+\newcommand{\HDUsigndate}[1]{\renewcommand{\HDU@signdate}{#1}}
+\renewcommand{\maketitle}{%
+    \clearpage\thispagestyle{empty}%
+    \par\noindent\parbox[t]{15cm}{%
+        \vspace{\topskip}\vspace*{-\topskip}%
+        \fontspec{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{12bp}{0bp}\selectfont%
+
+        \vspace*{23.25bp}\parbox[t][39.75bp][t]{13cm}{\centering\includegraphics[width=278.25bp,height=39.75bp]{HDU-Logo/transparent.png}}%
+
+        \vspace{28bp}\hspace*{1.75bp}\parbox[t][40bp][t]{360.5bp}{\fontsize{40bp}{51.25bp}\selectfont\bfseries 本\hspace{\fill}科\hspace{\fill}毕\hspace{\fill}业\hspace{\fill}设\hspace{\fill}计}%
+
+        \vspace{25.25bp}\parbox[t][22bp][t]{13cm}{\centering\fontsize{22bp}{28.1875bp}\bfseries （{\HDU@year}\hspace{0.25em}届）}%
+
+        \vspace{60.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 题\hspace{\fill}目}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\@title}}%
+
+        \vspace{5.25bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}院}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@school}}%
+
+        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 专\hspace{\fill}业}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@major}}%
+
+        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 班\hspace{\fill}级}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\fontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@classid}}%
+
+        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}号}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\fontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@studentid}}%
+
+        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}生\hspace{\fill}姓\hspace{\fill}名}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\@author}}%
+
+        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 指\hspace{\fill}导\hspace{\fill}教\hspace{\fill}师}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@adviser}}%
+
+        \vspace{5.75bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 完\hspace{\fill}成\hspace{\fill}日\hspace{\fill}期}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\fontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@finishdate}}%
+
+        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{\fill}%
+    }%
+    \clearpage\thispagestyle{empty}%
+    \par\noindent\hspace{-1cm}\parbox[t]{15cm}{
+        \vspace{\topskip}\vspace*{-\topskip}%
+        \fontspec{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{12bp}{0bp}\selectfont%
+
+        \vspace*{85bp}\parbox[t][18bp][t]{\textwidth}{\centering\sffamily\CJKfontspec{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{18bp}{23.0625bp}\selectfont\bfseries 诚\hspace{0.5em}信\hspace{0.5em}承\hspace{0.5em}诺}%
+
+        \vspace{41bp}\parbox[t]{\textwidth}{\rmfamily\fontsize{14bp}{35bp}\selectfont\leavevmode{\parindent=2em\indent}我谨在此承诺：本人所写的毕业论文《{\@title}》均系本人独立完成，没有抄袭行为，凡涉及其他作者的观点和材料，均作了注释，若有不实，后果由本人承担。}%
+
+        \vspace{55bp}
+        \parbox[t][15bp][t]{\textwidth}{\sffamily\CJKfontspec{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{35bp}\selectfont\hspace*{211bp}\bfseries 承诺人（签名）：}%
+
+        \vspace{19bp}
+        \parbox[t][15bp][t]{\textwidth}{\fontspec{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{35bp}\selectfont\hspace*{223bp}\bfseries{\HDU@signdate}}%
+
+        \vspace{\fill}%
+    }\hspace{1cm}%
+    \clearpage%
+}
 
 % 启用页眉页脚
 \AtBeginDocument{\pagestyle{HDU-bachelor}}

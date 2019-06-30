@@ -39,6 +39,15 @@
 
 \title{杭州电子科技大学本科毕业设计 \LaTeX{} 模版样例文档}
 \author{张三}
+\date{2019 年 6 月 5 日}
+\HDUyear{2019}
+\HDUschool{计算机学院}
+\HDUmajor{计算机科学与技术}
+\HDUclassid{00000000}
+\HDUstudentid{00000000}
+\HDUadviser{李四}
+\HDUfinishdate{2019 年 6 月}
+\HDUsigndate{2019 年 6 月 5 日}
 
 % 从 ref.bib 中读入参考文献
 \addbibresource{ref.bib}
@@ -48,7 +57,10 @@
 \pagenumbering{roman}
 % 关闭页眉、页脚
 \pagestyle{empty}
-% 导入封面
+
+% 生成封面
+\maketitle
+% 或者使用 Microsoft Word 制作封面后导入
 %\includepdf[pages={-}]{封面.pdf}
 
 \clearpage
@@ -63,7 +75,6 @@
 \textsf{关键词：}杭州电子科技大学；毕业设计；\LaTeX；模版
 
 \clearpage
-
 \section*{\textbf{ABSTRACT}}
 
 This is a sample document of a \LaTeX{} template for bachelor thesis of Hangzhou Dianzi University.

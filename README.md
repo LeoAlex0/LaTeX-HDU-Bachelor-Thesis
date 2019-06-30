@@ -14,7 +14,11 @@ LaTeX template for bachelor thesis of Hangzhou Dianzi University
 
 示例源码：[example.tex](example.pdf)
 
-这个模板不包含封面等内容。建议使用 Microsoft Word 导出 PDF 后使用
+这个模板包含一个内建的封面，可以使用
+```tex
+\maketitle
+```
+命令来调用内建的封面。但不同学院的封面版式可能有细微差别。这种情况下，可以使用 Microsoft Word 制作封面，导出 PDF 后使用
 ```tex
 \includepdf[pages={-}]{封面.pdf}
 ```
@@ -26,4 +30,4 @@ LaTeX template for bachelor thesis of Hangzhou Dianzi University
 ```
 为文档模板。
 
-如果需要输出 Microsoft Word 格式以进行论文查重，可以尝试 [Foxit PDF 转 Word](http://pdf2word.pdf365.cn/)（付费软件）。本模板的排版特效可被其识别。
+如果需要输出 Microsoft Word 格式以进行论文查重，可以尝试 [Foxit PDF 转 Word](http://pdf2word.pdf365.cn/)（付费软件）。本模板的排版效果可被其识别。
