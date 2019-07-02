@@ -70,6 +70,9 @@
 \setmonofont{texgyrecursor-regular.otf}[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf,Ligatures=NoCommon]
 
 % 设置中文字体为中易系列字体，如果在非 Microsoft Windows 环境下使用，可能需要安装这些字体
+\newfontfamily{\HDU@SimSun}{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\newfontfamily{\HDU@SimHei}{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\newfontfamily{\HDU@SimKai}{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
 \setCJKfamilyfont{zhsong}{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
 \setCJKfamilyfont{zhhei}{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
 \setCJKfamilyfont{zhfang}{FangSong}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
@@ -200,65 +203,65 @@
     \clearpage\thispagestyle{empty}%
     \par\noindent\parbox[t]{15cm}{%
         \vspace{\topskip}\vspace*{-\topskip}%
-        \fontspec{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{12bp}{0bp}\selectfont%
+        \HDU@SimSun\CJKfamily{zhsong}\fontsize{12bp}{0bp}\selectfont%
 
-        \vspace*{23.25bp}\parbox[t][39.75bp][t]{13cm}{\centering\includegraphics[width=278.25bp,height=39.75bp]{HDU-Logo/transparent.png}}%
+        \vspace*{23.5bp}\parbox[t][39.75bp][t]{13cm}{\centering\includegraphics[width=278.25bp,height=39.75bp]{HDU-Logo/transparent.png}}%
 
-        \vspace{28bp}\hspace*{1.75bp}\parbox[t][40bp][t]{360.5bp}{\fontsize{40bp}{51.25bp}\selectfont\bfseries 本\hspace{\fill}科\hspace{\fill}毕\hspace{\fill}业\hspace{\fill}设\hspace{\fill}计}%
+        \vspace{27.875bp}\hspace*{1.75bp}\parbox[t][40bp][t]{360.5bp}{\fontsize{40bp}{51.25bp}\selectfont\bfseries 本\hspace{\fill}科\hspace{\fill}毕\hspace{\fill}业\hspace{\fill}设\hspace{\fill}计}%
 
         \vspace{25.25bp}\parbox[t][22bp][t]{13cm}{\centering\fontsize{22bp}{28.1875bp}\bfseries （{\HDU@year}\hspace{0.25em}届）}%
 
-        \vspace{60.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 题\hspace{\fill}目}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\@title}}%
+        \vspace{60.625bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 题\hspace{\fill}目}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\@title}}%
 
         \vspace{5.25bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}院}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@school}}%
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}院}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@school}}%
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 专\hspace{\fill}业}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@major}}%
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 专\hspace{\fill}业}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@major}}%
+
+        \vspace{5.625bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 班\hspace{\fill}级}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\HDU@SimKai\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@classid}}%
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 班\hspace{\fill}级}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\fontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@classid}}%
+        \vspace{25.625bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}号}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\HDU@SimKai\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@studentid}}%
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}号}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\fontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@studentid}}%
-
-        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
-
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}生\hspace{\fill}姓\hspace{\fill}名}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\@author}}%
-
-        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
-
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 指\hspace{\fill}导\hspace{\fill}教\hspace{\fill}师}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@adviser}}%
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}生\hspace{\fill}姓\hspace{\fill}名}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\@author}}%
 
         \vspace{5.75bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 完\hspace{\fill}成\hspace{\fill}日\hspace{\fill}期}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\fontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{19.21875bp}\selectfont{\HDU@finishdate}}%
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 指\hspace{\fill}导\hspace{\fill}教\hspace{\fill}师}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@adviser}}%
+
+        \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
+
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 完\hspace{\fill}成\hspace{\fill}日\hspace{\fill}期}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\HDU@SimKai\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@finishdate}}%
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
         \vspace{\fill}%
     }%
     \clearpage\thispagestyle{empty}%
-    \par\noindent\hspace{-1cm}\parbox[t]{15cm}{
+    \par\noindent\parbox[t]{15cm}{
         \vspace{\topskip}\vspace*{-\topskip}%
-        \fontspec{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{12bp}{0bp}\selectfont%
+        \HDU@SimSun\CJKfamily{zhsong}\fontsize{12bp}{0bp}\selectfont%
 
-        \vspace*{85bp}\parbox[t][18bp][t]{\textwidth}{\centering\sffamily\CJKfontspec{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{18bp}{23.0625bp}\selectfont\bfseries 诚\hspace{0.5em}信\hspace{0.5em}承\hspace{0.5em}诺}%
+        \vspace*{85.25bp}\parbox[t][18bp][t]{13cm}{\centering\sffamily\CJKfamily{zhhei}\fontsize{18bp}{23.0625bp}\selectfont\bfseries 诚\hspace{0.5em}信\hspace{0.5em}承\hspace{0.5em}诺}%
 
-        \vspace{41bp}\parbox[t]{\textwidth}{\rmfamily\fontsize{14bp}{35bp}\selectfont\leavevmode{\parindent=2em\indent}我谨在此承诺：本人所写的毕业论文《{\@title}》均系本人独立完成，没有抄袭行为，凡涉及其他作者的观点和材料，均作了注释，若有不实，后果由本人承担。}%
+        \vspace{40.625bp}\hspace{-1cm}\parbox[t]{15cm}{\rmfamily\fontsize{14bp}{35bp}\selectfont\leavevmode{\parindent=2em\indent}我谨在此承诺：本人所写的毕业论文《{\@title}》均系本人独立完成，没有抄袭行为，凡涉及其他作者的观点和材料，均作了注释，若有不实，后果由本人承担。}%
 
-        \vspace{55bp}
-        \parbox[t][15bp][t]{\textwidth}{\sffamily\CJKfontspec{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{35bp}\selectfont\hspace*{211bp}\bfseries 承诺人（签名）：}%
+        \vspace{55.375bp}
+        \parbox[t][15bp][t]{\textwidth}{\sffamily\CJKfamily{zhhei}\fontsize{15bp}{35bp}\selectfont\hspace*{182.5bp}\bfseries 承诺人（签名）：}%
 
-        \vspace{19bp}
-        \parbox[t][15bp][t]{\textwidth}{\fontspec{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\CJKfontspec{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]\fontsize{15bp}{35bp}\selectfont\hspace*{223bp}\bfseries{\HDU@signdate}}%
+        \vspace{18.875bp}
+        \parbox[t][15bp][t]{\textwidth}{\HDU@SimHei\CJKfamily{zhhei}\fontsize{15bp}{35bp}\selectfont\hspace*{194.75bp}\bfseries{\HDU@signdate}}%
 
         \vspace{\fill}%
-    }\hspace{1cm}%
+    }%
     \clearpage%
 }
 
