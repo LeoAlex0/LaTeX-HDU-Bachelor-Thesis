@@ -12,7 +12,7 @@ LaTeX template for bachelor thesis of Hangzhou Dianzi University
 
 示例文章：[example.pdf](example.pdf)
 
-示例源码：[example.tex](example.pdf)
+示例源码：[example.tex](example.tex)
 
 这个模板包含一个内建的封面，可以使用
 ```tex
