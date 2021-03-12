@@ -8,6 +8,8 @@ LaTeX template for bachelor thesis of Hangzhou Dianzi University
 
 这是一个适用于杭州电子科技大学本科毕业设计的 LaTeX 模版。
 
+使用了Fandol系列字体取代原有的中易系列字体，可以在Linux一类地方愉快的使用了。
+
 这个模板目前只支持 XeLaTeX 引擎，不支持 pdfLaTeX 和 LuaLaTeX 引擎。
 
 示例文章：[example.pdf](example.pdf)

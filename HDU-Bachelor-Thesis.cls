@@ -69,17 +69,18 @@
 \setsansfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,BoldItalicFont=texgyreheros-bolditalic.otf,ItalicFont=texgyreheros-italic.otf]
 \setmonofont{texgyrecursor-regular.otf}[BoldFont=texgyrecursor-bold.otf,BoldItalicFont=texgyrecursor-bolditalic.otf,ItalicFont=texgyrecursor-italic.otf,Ligatures=NoCommon]
 
-% 设置中文字体为中易系列字体，如果在非 Microsoft Windows 环境下使用，可能需要安装这些字体
-\newfontfamily{\HDU@SimSun}{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
-\newfontfamily{\HDU@SimHei}{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
-\newfontfamily{\HDU@SimKai}{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
-\setCJKfamilyfont{zhsong}{SimSun}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
-\setCJKfamilyfont{zhhei}{SimHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
-\setCJKfamilyfont{zhfang}{FangSong}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
-\setCJKfamilyfont{zhkai}{KaiTi}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
-\setCJKromanfont{SimSun}[AutoFakeBold=1.5,ItalicFont={FangSong}]
-\setCJKsansfont{SimHei}[AutoFakeBold=1.5,ItalicFont={KaiTi}]
-\setCJKmonofont{FangSong}[AutoFakeBold=1.5,ItalicFont={FangSong}]
+%% 设置中文字体为中易系列字体，如果在非 Microsoft Windows 环境下使用，可能需要安装这些字体
+% 字体换成了Fandol套，有TexLive的应该都可以直接用了
+\newfontfamily{\HDU@SimSun}{FandolSong}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\newfontfamily{\HDU@SimHei}{FandolHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\newfontfamily{\HDU@SimKai}{FandolKai}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKfamilyfont{zhsong}{FandolSong}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKfamilyfont{zhhei}{FandolHei}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKfamilyfont{zhfang}{FandolFang}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKfamilyfont{zhkai}{FandolKai}[AutoFakeBold=1.5,AutoFakeSlant=0.25]
+\setCJKromanfont{FandolSong}[AutoFakeBold=1.5,ItalicFont={FandolFang}]
+\setCJKsansfont{FandolHei}[AutoFakeBold=1.5,ItalicFont={FandolKai}]
+\setCJKmonofont{FandolFang}[AutoFakeBold=1.5,ItalicFont={FandolFang}]
 
 % 关掉 CTeX 的 1.3 倍行距
 \linespread{1}
