@@ -60,9 +60,6 @@
 % 表格支持多行单元格
 \RequirePackage{makecell}
 
-% 隐藏参考文献标题
-\renewcommand\refname{}
-
 % 超链接格式设置
 \hypersetup{unicode=true,hidelinks,linktoc=all}
 
@@ -111,7 +108,7 @@
 \newcommand{\unnumberedsection}[1]{\phantomsection\addcontentsline{toc}{section}{#1}\section*}
 
 % 设置一、二、三级小标题格式
-\titleformat{\section}{\filcenter\rmfamily\CJKfamily{zhhei}\fontsize{16bp}{20.5bp}\selectfont\vspace{\topskip}\vspace*{-\topskip}\vspace*{25bp}}{\thesection}{1em}{}
+\titleformat{\section}{\filright\bfseries\CJKfamily{zhsong}\fontsize{14bp}{20.5bp}\selectfont\vspace{\topskip}\vspace*{-\topskip}\vspace*{25bp}}{\thesection}{1em}{}
 \titlespacing{\section}{0bp}{0bp}{25bp}
 \titleformat{\subsection}{\sffamily\fontsize{14bp}{20bp}\selectfont}{\thesubsection}{1em}{}
 \titlespacing{\subsection}{0bp}{0bp}{0bp}
