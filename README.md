@@ -36,4 +36,4 @@ LaTeX template for bachelor thesis of Hangzhou Dianzi University
 
 ## 预览
 
-- [example.pdf](/blob/master/example.pdf)
+- [example.pdf](example.pdf)
