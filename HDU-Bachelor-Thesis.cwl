@@ -10,5 +10,5 @@
 \HDUclassid{classid}
 \HDUstudentid{studentid}
 \HDUadviser{adviser}
-\HDUfinishdate{finishdate}
+\HDUsubmitdate{submitdate}
 \HDUsigndate{signdate}
