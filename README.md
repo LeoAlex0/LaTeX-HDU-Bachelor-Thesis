@@ -36,34 +36,4 @@ LaTeX template for bachelor thesis of Hangzhou Dianzi University
 
 ## 预览
 
-![预览页面 封面](preview/i.svg "预览页面 封面")
-
-![预览页面 诚信承诺](preview/ii.svg "预览页面 诚信承诺")
-
-![预览页面 中文摘要](preview/iii.svg "预览页面 中文摘要")
-
-![预览页面 英文摘要](preview/iv.svg "预览页面 英文摘要")
-
-![预览页面 目录](preview/v.svg "预览页面 目录")
-
-![预览页面 1](preview/1.svg "预览页面 1")
-
-![预览页面 2](preview/2.svg "预览页面 2")
-
-![预览页面 3](preview/3.svg "预览页面 3")
-
-![预览页面 4](preview/4.svg "预览页面 4")
-
-![预览页面 5](preview/5.svg "预览页面 5")
-
-![预览页面 6](preview/6.svg "预览页面 6")
-
-![预览页面 7](preview/7.svg "预览页面 7")
-
-![预览页面 8](preview/8.svg "预览页面 8")
-
-![预览页面 9](preview/9.svg "预览页面 9")
-
-![预览页面 10](preview/10.svg "预览页面 10")
-
-![预览页面 11](preview/11.svg "预览页面 11")
+- [example.pdf](/blob/master/example.pdf)
