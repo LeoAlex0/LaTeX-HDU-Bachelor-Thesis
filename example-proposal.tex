@@ -1,0 +1,115 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = xelatex
+% !BIB program = biber
+
+% MIT License
+%
+% Copyright (c) 2019 Star Brilliant
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{HDU-Bachelor-Thesis-Proposal}
+
+% 导入 \addbibresource \printbibliography
+\usepackage{biblatex}
+% 导入 \includepdf
+\usepackage{pdfpages}
+% 导入 \sout
+\usepackage{ulem}
+% 导入 \setmathfont
+\usepackage{unicode-math}
+% 导入 \textcolor
+\usepackage{xcolor}
+
+\title{杭州电子科技大学本科开题报告 \LaTeX{} 模版样例文档}
+\author{张三}
+\date{2021 年 3 月 19 日}
+\HDUschool{计算机学院}
+\HDUmajor{计算机科学与技术}
+\HDUclassid{00000000}
+\HDUstudentid{00000000}
+\HDUadviser{李四}
+
+% 从 ref.bib 中读入参考文献
+\addbibresource{ref.bib}
+
+% 设置公式字体（其它字体在模板中已设置好）
+\setmathfont{texgyretermes-math.otf}
+
+\begin{document}
+% 页码在 PDF 阅读器中显示为罗马数字
+\pagenumbering{roman}
+% 关闭页眉、页脚
+\pagestyle{empty}
+
+% 生成封面
+\maketitle
+% 或者使用 Microsoft Word 制作封面后导入
+%\includepdf[pages={-}]{封面.pdf}
+
+\clearpage
+% 将页码重置为 1
+\pagenumbering{arabic}
+
+\section{综述本课题国内外研究动态，说明选题的依据和意义}
+
+体现阿里价值观，形成思维闭环。
+
+\section{研究的基本内容，拟解决的主要问题}
+
+寻找抓手，倒逼代码赋能用户。
+
+\section{研究步骤、方法及措施}
+
+为过程鼓掌，为结果买单\cite{ali-quotes}。
+
+\section{研究工作进度}
+
+\begin{table}[h]%
+	\centering
+	\begin{tabular}{| c | c | c |}% 
+    \hline
+	\bfseries 序号 & \bfseries 时间 & \bfseries 内容 \\ \hline
+	\bfseries 1 & 2020.12.2--2020.12.25 & 选好毕业设计题目并准备相关资料 \\ \hline
+	\bfseries 2 & 2020.12.26--2021.1.10 & 接受任务书 \\ \hline
+    \bfseries 3 & 2021.1.11--2021.3.14 & 搜集资料，准备开题报告 \\ \hline
+	\bfseries 4 & 2021.3.15--2021.3.19 & 开题报告会 \\ \hline
+    \bfseries 5 & 2021.3.20--? & 找到抓手，思考毕设方法论 \\ \hline
+	\bfseries 6 & ?--? & 精细化业务颗粒度，重塑设计细节 \\ \hline
+    \bfseries 7 & ?--? & 打出一套从编码到调试组合拳 \\ \hline
+	\bfseries 8 & ?--2021.5.20 & 复盘实际实现，赋能毕设论文 \\ \hline
+    \bfseries 9 & 2021.5.21--2021.5.31 & 论文评审及查重 \\ \hline
+	\bfseries 10 & 2021.6.1--2021.6.6 & 答辩报告会 \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\clearpage
+% 修正目录超链接问题
+\phantomsection{}
+
+% 列出参考文献
+\section{主要参考文献}
+\printbibliography[heading=bibintoc]
+
+% 生成小组评审意见表
+\clearpage
+\makeassessment
+
+\end{document}
