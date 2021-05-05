@@ -190,7 +190,7 @@
 \newcommand{\HDU@classid}{}
 \newcommand{\HDU@studentid}{}
 \newcommand{\HDU@adviser}{}
-\newcommand{\HDU@finishdate}{\the\year{} 年 \the\month{} 月}
+\newcommand{\HDU@submitdate}{\the\year{} 年 \the\month{} 月}
 \newcommand{\HDU@signdate}{\the\year{} 年 \the\month{} 月 \the\day{} 日}
 \newcommand{\HDUyear}[1]{\renewcommand{\HDU@year}{#1}}
 \newcommand{\HDUschool}[1]{\renewcommand{\HDU@school}{#1}}
@@ -198,7 +198,7 @@
 \newcommand{\HDUclassid}[1]{\renewcommand{\HDU@classid}{#1}}
 \newcommand{\HDUstudentid}[1]{\renewcommand{\HDU@studentid}{#1}}
 \newcommand{\HDUadviser}[1]{\renewcommand{\HDU@adviser}{#1}}
-\newcommand{\HDUsubmitdate}[1]{\renewcommand{\HDU@finishdate}{#1}}
+\newcommand{\HDUsubmitdate}[1]{\renewcommand{\HDU@submitdate}{#1}}
 \newcommand{\HDUsigndate}[1]{\renewcommand{\HDU@signdate}{#1}}
 \renewcommand{\maketitle}{%
     \clearpage\thispagestyle{empty}%
@@ -240,7 +240,7 @@
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 递\hspace{\fill}交\hspace{\fill}日\hspace{\fill}期}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\HDU@SimKai\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@finishdate}}%
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 递\hspace{\fill}交\hspace{\fill}日\hspace{\fill}期}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\HDU@SimKai\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@submitdate}}%
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
