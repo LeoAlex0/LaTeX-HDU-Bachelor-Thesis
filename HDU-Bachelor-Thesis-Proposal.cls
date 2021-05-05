@@ -59,6 +59,8 @@
 \RequirePackage{xeCJK}
 % 表格支持多行单元格
 \RequirePackage{makecell}
+% 支持中文标题编号
+\RequirePackage{zhnumber}
 
 % 超链接格式设置
 \hypersetup{unicode=true,hidelinks,linktoc=all}
@@ -107,12 +109,14 @@
 % 定义 \unnumberedsection 命令，用以方便地加入一个无标号的小标题
 \newcommand{\unnumberedsection}[1]{\phantomsection\addcontentsline{toc}{section}{#1}\section*}
 
+\renewcommand{\thesection}{\zhnum{section}、}
+
 % 设置一、二、三级小标题格式
-\titleformat{\section}{\filright\bfseries\CJKfamily{zhsong}\fontsize{14bp}{20.5bp}\selectfont\vspace{\topskip}\vspace*{-\topskip}\vspace*{25bp}}{\thesection}{1em}{}
-\titlespacing{\section}{0bp}{0bp}{25bp}
-\titleformat{\subsection}{\sffamily\fontsize{14bp}{20bp}\selectfont}{\thesubsection}{1em}{}
+\titleformat{\section}{\filright\bfseries\CJKfamily{zhsong}\fontsize{14bp}{20.5bp}\selectfont\vspace{\topskip}\vspace*{-\topskip}\vspace*{25bp}}{\thesection}{0em}{}
+\titlespacing{\section}{0bp}{0bp}{15bp}
+\titleformat{\subsection}{\sffamily\fontsize{14bp}{20bp}\selectfont}{\thesubsection}{0em}{}
 \titlespacing{\subsection}{0bp}{0bp}{0bp}
-\titleformat{\subsubsection}{\sffamily\fontsize{12bp}{20bp}\selectfont}{\thesubsubsection}{1em}{}
+\titleformat{\subsubsection}{\sffamily\fontsize{12bp}{20bp}\selectfont}{\thesubsubsection}{0em}{}
 \titlespacing{\subsubsection}{0bp}{0bp}{0bp}
 
 % 设置目录格式
@@ -222,6 +226,7 @@
 }
 
 \newcommand{\makeassessment}{%
+\clearpage
 \section{开题小组评审意见}
 
 \begin{table}[h]%

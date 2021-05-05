@@ -12,9 +12,11 @@ LaTeX template for bachelor thesis of Hangzhou Dianzi University
 
 这个模板目前只支持 XeLaTeX 引擎，不支持 pdfLaTeX 和 LuaLaTeX 引擎。
 
-示例文章：[example.pdf](example.pdf)
+本仓库包含开题报告和毕设论文两份模板：
 
-示例源码：[example.tex](example.tex)
+- 开题报告样例： [example-proposal.pdf](example-proposal.pdf) | 源码：[example-proposal.tex](example.tex)
+- 毕设论文样例： [example-thesis.pdf](example-proposal.pdf) | 源码：[example-thesis.tex](example.tex)
+
 
 这个模板包含一个内建的封面，可以使用
 ```tex
@@ -33,7 +35,3 @@ LaTeX template for bachelor thesis of Hangzhou Dianzi University
 为文档模板。
 
 如果需要输出 Microsoft Word 格式以进行论文查重，可以尝试 [Foxit PDF 转 Word](http://pdf2word.pdf365.cn/)（付费软件）。本模板的排版效果可被其识别。
-
-## 预览
-
-- [example.pdf](example.pdf)
