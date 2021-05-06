@@ -112,7 +112,7 @@
 
 % 设置一、二、三级小标题格式
 \titleformat{\section}{\filright\bfseries\CJKfamily{zhsong}\fontsize{14bp}{20.5bp}\selectfont\vspace{\topskip}\vspace*{-\topskip}\vspace*{25bp}}{\zhnum{section}、}{0em}{}
-\titlespacing{\section}{0bp}{0bp}{15bp}
+\titlespacing{\section}{0bp}{0bp}{10bp}
 \titleformat{\subsection}{\bfseries\CJKfamily{zhsong}\fontsize{12bp}{20bp}\selectfont}{\thesubsection}{0.5em}{}
 \titlespacing{\subsection}{0bp}{0bp}{0bp}
 \titleformat{\subsubsection}{\sffamily\CJKfamily{zhsong}\fontsize{12bp}{20bp}\selectfont}{\thesubsubsection}{0.5em}{}
