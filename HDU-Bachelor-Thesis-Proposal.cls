@@ -232,7 +232,7 @@
 
 \begin{table}[h]%
 	\centering \bfseries
-	\begin{tabular}{|  c | c | c | c | c | c | c |}% 
+	\begin{tabular}{|  c | c | c | c | c | c | c |}%
     \hline
 	考核点 & \makecell{背景及意义 \\ 阐述情况} & \makecell{研究内容与任务 \\ 书的匹配程度} & \makecell{研究方案 \\ 合理性} & \makecell{进度安 \\ 排情况} & \makecell{答辩 \\ 情况} & \hspace{20bp} 总分 \hspace{20bp} \\ \hline
 	满分   & 20 & 30 & 30 & 10 & 10 & 100 \\ \hline
