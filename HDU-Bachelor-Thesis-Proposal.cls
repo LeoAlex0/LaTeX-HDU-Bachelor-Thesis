@@ -35,7 +35,8 @@
 \PassOptionsToPackage{backend=biber,style=gb7714-2015}{biblatex}
 
 % 调用基类 CTeX Article
-\LoadClass[UTF8,fontset=fandol,zihao=-4]{ctexart}
+% 设置 fandol 字体集以便 MikTeX 自动安装依赖
+\LoadClass[UTF8,fontset=Fandol,zihao=-4]{ctexart}
 
 % 尺寸运算功能
 \RequirePackage{calc}
