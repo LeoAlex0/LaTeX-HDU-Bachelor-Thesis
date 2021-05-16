@@ -1,8 +1,8 @@
 # LaTeX-HDU-Bachelor-Thesis
 
-LaTeX template for bachelor thesis of Hangzhou Dianzi University
+LaTeX template for bachelor thesis of Hangzhou Dianzi University (unofficial)
 
-杭州电子科技大学本科毕业设计的 LaTeX 模板
+杭州电子科技大学本科毕业设计的 LaTeX 模板 (非官方)
 
 ---
 
