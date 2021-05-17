@@ -231,11 +231,13 @@
 }
 
 \newcommand{\makeassessment}{%
-\clearpage
+\clearpage\thispagestyle{empty}%
+
 \section{开题小组评审意见}
 
 \begin{table}[h]%
-	\centering \bfseries
+    \HDU@SimSun\CJKfamily{zhsong}\selectfont%
+	\centering\bfseries
 	\begin{tabular}{|  c | c | c | c | c | c | c |}%
     \hline
 	考核点 & \makecell{背景及意义 \\ 阐述情况} & \makecell{研究内容与任务 \\ 书的匹配程度} & \makecell{研究方案 \\ 合理性} & \makecell{进度安 \\ 排情况} & \makecell{答辩 \\ 情况} & \hspace{20bp} 总分 \hspace{20bp} \\ \hline
