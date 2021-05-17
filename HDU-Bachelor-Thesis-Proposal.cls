@@ -62,6 +62,13 @@
 \RequirePackage{makecell}
 % 支持中文标题编号
 \RequirePackage{zhnumber}
+% 引入 xpatch
+\RequirePackage{xpatch}
+
+% 禁用 XeCJK 相关 warning
+\ExplSyntaxOn
+    \xpatchcmd\__xeCJK_check_family:n{\__xeCJK_warning:nxx}{\__xeCJK_info:nxx}{}{}
+\ExplSyntaxOff
 
 % 超链接格式设置
 \hypersetup{unicode=true,hidelinks,linktoc=all}
@@ -184,38 +191,37 @@
     \clearpage\thispagestyle{empty}%
     \par\noindent\parbox[t]{15cm}{%
         \vspace{\topskip}\vspace*{-\topskip}%
+        \HDU@SimSun\CJKfamily{zhsong}\fontsize{12bp}{0bp}\selectfont%
 
-        \vspace{80.5bp}\HDU@SimSun\CJKfamily{zhsong}\fontsize{12bp}{0bp}\selectfont%
+        \vspace*{66bp}\centering\parbox[t][30bp][t]{10cm}{\fontsize{30bp}{\baselineskip}\selectfont\bfseries 杭\hspace{\fill}州\hspace{\fill}电\hspace{\fill}子\hspace{\fill}科\hspace{\fill}技\hspace{\fill}大\hspace{\fill}学}%
 
-        \vspace*{22bp}\centering\parbox[t][30bp][t]{10cm}{\fontsize{30bp}{\baselineskip}\CJKfamily{zhsong}\selectfont\bfseries 杭\hspace{\fill}州\hspace{\fill}电\hspace{\fill}子\hspace{\fill}科\hspace{\fill}技\hspace{\fill}大\hspace{\fill}学}%
+        \vspace{22bp}\centering\parbox[t][24bp][t]{355bp}{\fontsize{24bp}{\baselineskip}\selectfont\bfseries 毕\hspace{\fill}业\hspace{\fill}设\hspace{\fill}计\hspace{\fill}（\hspace{\fill}论\hspace{\fill}文\hspace{\fill}）开\hspace{\fill}题\hspace{\fill}报\hspace{\fill}告}%
 
-        \vspace{22bp}\centering\parbox[t][24bp][t]{355bp}{\fontsize{24bp}{\baselineskip}\CJKfamily{zhsong}\selectfont\bfseries 毕\hspace{\fill}业\hspace{\fill}设\hspace{\fill}计\hspace{\fill}（\hspace{\fill}论\hspace{\fill}文\hspace{\fill}）开\hspace{\fill}题\hspace{\fill}报\hspace{\fill}告}%
-
-        \vspace{80.625bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 题\hspace{\fill}目}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\CJKfamily{zhsong}\fontsize{15bp}{18bp}\selectfont{\@title}}%
-
-        \vspace{2bp}\hspace*{102.5bp}\rule[0pt]{235bp}{0.5bp}%
-
-        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 学\hspace{\fill}院}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\CJKfamily{zhsong}\fontsize{14bp}{18bp}\selectfont{\HDU@school}}%
+        \vspace{90.5bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 题\hspace{\fill}目}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\fontsize{15bp}{18bp}\selectfont{\@title}}%
 
         \vspace{2bp}\hspace*{102.5bp}\rule[0pt]{235bp}{0.5bp}%
 
-        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 专\hspace{\fill}业}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\CJKfamily{zhsong}\fontsize{14bp}{18bp}\selectfont{\HDU@major}}%
+        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 学\hspace{\fill}院}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\fontsize{14bp}{18bp}\selectfont{\HDU@school}}%
 
         \vspace{2bp}\hspace*{102.5bp}\rule[0pt]{235bp}{0.5bp}%
 
-        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 姓\hspace{\fill}名}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\CJKfamily{zhsong}\fontsize{14bp}{18bp}\selectfont{\@author}}%
+        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 专\hspace{\fill}业}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\fontsize{14bp}{18bp}\selectfont{\HDU@major}}%
 
         \vspace{2bp}\hspace*{102.5bp}\rule[0pt]{235bp}{0.5bp}%
 
-        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 班\hspace{\fill}级}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\CJKfamily{zhsong}\fontsize{14bp}{18bp}\selectfont{\HDU@classid}}%
+        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 姓\hspace{\fill}名}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\fontsize{14bp}{18bp}\selectfont{\@author}}%
 
         \vspace{2bp}\hspace*{102.5bp}\rule[0pt]{235bp}{0.5bp}%
 
-        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 学\hspace{\fill}号}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\CJKfamily{zhsong}\fontsize{14bp}{18bp}\selectfont{\HDU@studentid}}%
+        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 班\hspace{\fill}级}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\fontsize{14bp}{18bp}\selectfont{\HDU@classid}}%
 
         \vspace{2bp}\hspace*{102.5bp}\rule[0pt]{235bp}{0.5bp}%
 
-        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 指\hspace{\fill}导\hspace{\fill}教\hspace{\fill}师}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\CJKfamily{zhsong}\fontsize{14bp}{18bp}\selectfont{\HDU@adviser}}%
+        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 学\hspace{\fill}号}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\fontsize{14bp}{18bp}\selectfont{\HDU@studentid}}%
+
+        \vspace{2bp}\hspace*{102.5bp}\rule[0pt]{235bp}{0.5bp}%
+
+        \vspace{40.25bp}\hspace*{23bp}\parbox[t][14bp][t]{56bp}{\fontsize{14bp}{18bp}\selectfont\bfseries 指\hspace{\fill}导\hspace{\fill}教\hspace{\fill}师}\hspace{12bp}\parbox[b][14bp][b]{235bp}{\centering\bfseries\fontsize{14bp}{18bp}\selectfont{\HDU@adviser}}%
 
         \vspace{2bp}\hspace*{102.5bp}\rule[0pt]{235bp}{0.5bp}%
 

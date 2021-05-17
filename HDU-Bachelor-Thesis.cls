@@ -58,6 +58,13 @@
 \RequirePackage{titletoc}
 % xeCJK 中文支持包
 \RequirePackage{xeCJK}
+% 引入 xpatch
+\RequirePackage{xpatch}
+
+% 禁用 XeCJK 相关 warning
+\ExplSyntaxOn
+    \xpatchcmd\__xeCJK_check_family:n{\__xeCJK_warning:nxx}{\__xeCJK_info:nxx}{}{}
+\ExplSyntaxOff
 
 % 超链接格式设置
 \hypersetup{unicode=true,hidelinks,linktoc=all}
@@ -183,7 +190,7 @@
 % \HDUclassid{班级号码}
 % \HDUstudentid{学号}
 % \HDUadviser{指导教师}
-% \HDUsubmitdate{完成日期（年月）}
+% \HDUfinishdate{完成日期（年月）}
 % \HDUsigndate{诚信承诺签署日期（年月日）}
 \newcommand{\HDU@year}{\the\year{}}
 \newcommand{\HDU@school}{}
@@ -191,7 +198,7 @@
 \newcommand{\HDU@classid}{}
 \newcommand{\HDU@studentid}{}
 \newcommand{\HDU@adviser}{}
-\newcommand{\HDU@submitdate}{\the\year{} 年 \the\month{} 月}
+\newcommand{\HDU@finishdate}{\the\year{} 年 \the\month{} 月}
 \newcommand{\HDU@signdate}{\the\year{} 年 \the\month{} 月 \the\day{} 日}
 \newcommand{\HDUyear}[1]{\renewcommand{\HDU@year}{#1}}
 \newcommand{\HDUschool}[1]{\renewcommand{\HDU@school}{#1}}
@@ -199,7 +206,7 @@
 \newcommand{\HDUclassid}[1]{\renewcommand{\HDU@classid}{#1}}
 \newcommand{\HDUstudentid}[1]{\renewcommand{\HDU@studentid}{#1}}
 \newcommand{\HDUadviser}[1]{\renewcommand{\HDU@adviser}{#1}}
-\newcommand{\HDUsubmitdate}[1]{\renewcommand{\HDU@submitdate}{#1}}
+\newcommand{\HDUfinishdate}[1]{\renewcommand{\HDU@finishdate}{#1}}
 \newcommand{\HDUsigndate}[1]{\renewcommand{\HDU@signdate}{#1}}
 \renewcommand{\maketitle}{%
     \clearpage\thispagestyle{empty}%
@@ -209,9 +216,9 @@
 
         \vspace*{23.5bp}\parbox[t][39.75bp][t]{13cm}{\centering\includegraphics[width=278.25bp,height=39.75bp]{HDU-Logo/transparent.png}}%
 
-        \vspace{27.875bp}\hspace*{1.75bp}\parbox[t][40bp][t]{360.5bp}{\centering\fontsize{24bp}{30bp}\CJKfamily{zhhei}\selectfont\bfseries 本\hspace{6bp}科\hspace{6bp}毕\hspace{6bp}业\hspace{6bp}论\hspace{6bp}文\hspace{6bp}（\hspace{6bp}设\hspace{6bp}计\hspace{6bp}）}%
+        \vspace{27.875bp}\hspace*{1.75bp}\parbox[t][40bp][t]{360.5bp}{\fontsize{40bp}{51.25bp}\selectfont\bfseries 本\hspace{\fill}科\hspace{\fill}毕\hspace{\fill}业\hspace{\fill}设\hspace{\fill}计}%
 
-        \vspace{25.25bp}\parbox[t][22bp][t]{13cm}{\centering\fontsize{20bp}{28.1875bp}\bfseries （{\HDU@year}\hspace{0.25em}届）}%
+        \vspace{25.25bp}\parbox[t][22bp][t]{13cm}{\centering\fontsize{22bp}{28.1875bp}\bfseries （{\HDU@year}\hspace{0.25em}届）}%
 
         \vspace{60.625bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 题\hspace{\fill}目}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\@title}}%
 
@@ -225,11 +232,11 @@
 
         \vspace{5.625bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 班\hspace{\fill}级}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\HDU@SimKai\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@classid}}%
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 班\hspace{\fill}级}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@classid}}%
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.625bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}号}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\HDU@SimKai\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@studentid}}%
+        \vspace{25.625bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 学\hspace{\fill}号}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@studentid}}%
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
@@ -241,7 +248,7 @@
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
-        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 递\hspace{\fill}交\hspace{\fill}日\hspace{\fill}期}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\HDU@SimKai\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@submitdate}}%
+        \vspace{25.75bp}\hspace*{23bp}\parbox[t][15bp][t]{60bp}{\fontsize{15bp}{19.21875bp}\selectfont\bfseries 完\hspace{\fill}成\hspace{\fill}日\hspace{\fill}期}\hspace{12bp}\parbox[b][15bp][b]{262.5bp}{\centering\sffamily\CJKfamily{zhkai}\fontsize{15bp}{19.21875bp}\selectfont{\HDU@finishdate}}%
 
         \vspace{5.5bp}\hspace*{95bp}\rule[0pt]{262.5bp}{0.5bp}%
 
